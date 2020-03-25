@@ -22,7 +22,8 @@ namespace EserciziBase
             //  Esercizio10();
             //  Esercizio11();
             //  Esercizio12();
-            Esercizio13();
+            //  Esercizio13();
+            Esercizio14();
             Console.ReadLine();
         }
 
@@ -214,6 +215,23 @@ namespace EserciziBase
             }
             else Console.WriteLine("Questo è il risultato: {0}", sum);
 
+        }
+
+        static void Esercizio14()
+        {
+            Console.WriteLine("#### ESERCIZIO 20 ####");
+
+            Console.WriteLine("Inserisci il primo numero:");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Inserisci il secondo numero:");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            int absolute = Math.Abs(num1 - num2);
+
+            if (num1 > num2)
+            {
+                Console.WriteLine("il doppio del valore assoluto di {0} - {1} è = {2}", num1, num2, absolute * 2);
+            }
+            else Console.WriteLine("il valore assoluto di {0} - {1} è = {2}", num1, num2, absolute);
         }
     }
 }
