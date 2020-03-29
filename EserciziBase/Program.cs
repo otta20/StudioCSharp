@@ -23,7 +23,8 @@ namespace EserciziBase
             //  Esercizio11();
             //  Esercizio12();
             //  Esercizio13();
-            Esercizio14();
+            //  Esercizio14();
+            Esercizio15();
             Console.ReadLine();
         }
 
@@ -234,8 +235,23 @@ namespace EserciziBase
             else Console.WriteLine("il valore assoluto di {0} - {1} è = {2}", num1, num2, absolute);
         }
 
+        static void Esercizio15()
+        {
+            Console.WriteLine("#### ESERCIZIO 15 ####");
+            // Write a C# program that remove a specified character from a non-empty string using a index of character es: w3resource
+            string stringaDaModificare = "w3resource";
+            string stringaDaStampare0 = stringaDaModificare.Remove(2, 1);
+            string stringaDaStampare1 = stringaDaModificare.Remove(4, 1);
+            string stringaDaStampare2 = stringaDaModificare.Remove(8, 1);
+            Console.Write($"Da questa stringa {stringaDaModificare} genera queste stringhe: \n {stringaDaStampare0}, \n {stringaDaStampare1}, \n {stringaDaStampare2}.");
 
+        }
 
+        static void Esercizio16()
+        {
+            Console.WriteLine("#### ESERCIZIO 15 ####");
+        }
 
     }
+
 }
