@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booleani", "Booleani\Boolea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EserciziBase", "EserciziBase\EserciziBase.csproj", "{07B9329A-339E-4984-9698-2113B49A5D58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stringhe", "Stringhe\Stringhe.csproj", "{C63CDE69-94E6-4066-86B8-C35F24E90F08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{07B9329A-339E-4984-9698-2113B49A5D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07B9329A-339E-4984-9698-2113B49A5D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07B9329A-339E-4984-9698-2113B49A5D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63CDE69-94E6-4066-86B8-C35F24E90F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63CDE69-94E6-4066-86B8-C35F24E90F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63CDE69-94E6-4066-86B8-C35F24E90F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63CDE69-94E6-4066-86B8-C35F24E90F08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

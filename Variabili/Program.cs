@@ -10,6 +10,15 @@ namespace Variabili
     {
         static void Main(string[] args)
         {
+            // 1. dichiarazione: dichiarare il tipo e il nome
+            int unNumero;
+            // 2. assegnamento: impostazione di un valore ad una variabile precedentemente dichiarata
+            unNumero = 100;
+            // In alternativa, la prassi più comune è di unire subito le due fasi in fase di dichiarazione
+            // Questa unione si chiama "definizione"
+            int altroNumero = 200;
+
+
             //definizione(assegnamento) di una variabile intera
             int età = 30;
             
