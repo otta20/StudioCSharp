@@ -24,7 +24,13 @@ namespace EserciziBase
             //  Esercizio12();
             //  Esercizio13();
             //  Esercizio14();
-            Esercizio15();
+            //  Esercizio15();
+            //  Esercizio16();
+            //  Esercizio17();
+            //  Esercizio16Bis();
+            //  Esercizio17Bis();
+            //  Esercizio18();
+            Esercizio19();
             Console.ReadLine();
         }
 
@@ -249,9 +255,106 @@ namespace EserciziBase
 
         static void Esercizio16()
         {
-            Console.WriteLine("#### ESERCIZIO 15 ####");
+            Console.WriteLine("#### ESERCIZIO 16 ####");
+            //Write a C# program to create a new string from a given string where the first and last characters will change their positions.
+            string stringa1 = "Machebellagiornata";
+            string stringa2 = "Eserciziodistile";
+
+            string stringaDaStampare0 = stringa1.Substring(stringa1.Length - 1,1) + stringa1.Substring(1, stringa1.Length - 2) + stringa1.Substring(0,1);
+            string stringaDaStampare1 = stringa2.Substring(stringa2.Length-1,1) + stringa2.Substring(1,stringa2.Length-2) + stringa2.Substring(0,1);
+            string stringaDaStampare2 = stringa1.Substring(stringa1.Length - 1, 1) + stringa2.Substring(1, stringa2.Length - 2) + stringa1.Substring(stringa1.Length - 1, 1);
+            Console.WriteLine(stringaDaStampare0);
+            Console.WriteLine(stringaDaStampare1);
+            Console.WriteLine(stringaDaStampare2);
         }
 
+        static void Esercizio17()
+        {
+            Console.WriteLine("#### ESERCIZIO 17 ####");
+            // Write a C# program to create a new string from a given string (length 1 or more ) with the first character added at the front and back
+
+            string stringa1 = "Ma che bella giornata di programmazione in C#";
+
+            string stringaModificata = stringa1.Substring(0, 1) + stringa1 + stringa1.Substring(0,1);
+            Console.Write(stringaModificata);
+
+        }
+       
+        static void Esercizio16Bis()
+        {
+            Console.WriteLine("#### ESERCIZIO 16 BIS ####");
+            string stringaImmessa;
+            Console.WriteLine("\n inserisci qui la tua stringa da modificare: ");
+            stringaImmessa = Console.ReadLine();
+
+            if(stringaImmessa.Length>=1)
+            {
+                var firtsChar = stringaImmessa.Substring(0, 1);
+                var lastChar = stringaImmessa.Substring(stringaImmessa.Length-1, 1);
+                string stringaManipolata = stringaImmessa.Substring(1, stringaImmessa.Length - 2);
+
+                Console.WriteLine(lastChar + stringaManipolata + firtsChar);
+            }
+
+        }
+
+        static void Esercizio17Bis()
+        {
+            Console.WriteLine("#### ESERCIZIO 17 BIS ####");
+            string stringaImmessa;
+            Console.WriteLine("inserisci qui la tua stringa da modificare: ");
+            stringaImmessa = Console.ReadLine();
+
+            if (stringaImmessa.Length >= 1)
+            {
+                var firtsChar = stringaImmessa.Substring(0, 1);
+                Console.WriteLine(firtsChar + stringaImmessa + firtsChar);
+
+            }
+
+        }
+
+        static void Esercizio18()
+        {
+            Console.WriteLine("#### ESERCIZIO 23 ####");
+            //Write a C# program to convert a given string into lowercase
+            string stringaDaModificare;
+
+            Console.WriteLine("Inserisci la frase da modificare");
+            stringaDaModificare = Console.ReadLine();
+            Console.WriteLine($"questa è la tua frase trasformata:\n{stringaDaModificare.ToUpper()}");
+        }
+
+        static void Esercizio19()
+        {
+            Console.WriteLine("#### ESERCIZIO 28 ####");
+            //Write a C# program to find the longest word in a string
+            string stringaImmessa = "Write a C# Sharp Program to display the following pattern using the alphabet";
+            
+            string[] getStringLength = stringaImmessa.Split();
+            foreach (string word in getStringLength)
+            {
+                
+                Console.WriteLine(word.Length);
+
+            }
+            //return word;
+
+            //string word;
+            /*string[] pippo = new string[getStringLength.Length];
+            for(int i=0; i<=pippo.Length; i++)
+            {
+                if( i>i++)
+                {
+                
+                }
+            Console.Write(i);
+                i++;
+            }
+            
+    */
+
+        }
     }
 
 }
