@@ -16,13 +16,10 @@ namespace EserciziBase
             //  Esercizio4();
             //  Esercizio5();
             //  Esercizio6();
-            //  Esercizio7();
-            //  Esercizio8();
             //  Esercizio9();
             //  Esercizio10();
             //  Esercizio11();
             //  Esercizio12();
-            //  Esercizio13();
             //  Esercizio14();
             //  Esercizio15();
             //  Esercizio16();
@@ -30,7 +27,10 @@ namespace EserciziBase
             //  Esercizio16Bis();
             //  Esercizio17Bis();
             //  Esercizio18();
-            Esercizio19();
+            //  Esercizio19();
+            //  Esercizio23();
+            //  Esercizio24();
+            Esercizio28();
             Console.ReadLine();
         }
 
@@ -107,7 +107,7 @@ namespace EserciziBase
 
 
         }
-        static void Esercizio7()
+        static void Esercizio9()
         {
             Console.WriteLine("#### ESERCIZIO 9 ####");
                 double num1, num2, num3, num4, average;
@@ -127,7 +127,7 @@ namespace EserciziBase
 
         }
 
-        static void Esercizio8()
+        static void Esercizio10()
         {
             Console.WriteLine("#### ESERCIZIO 10 ####");
 
@@ -147,7 +147,7 @@ namespace EserciziBase
                 Console.WriteLine("il risultato delle operazioni tra i numeri: {0},{1},{2} è: {3} e {4}", num1, num2, num3, count1, count2);
 
         }
-        static void Esercizio9()
+        static void Esercizio11()
         {
             Console.WriteLine("#### ESERCIZIO 11 ####");
 
@@ -159,7 +159,7 @@ namespace EserciziBase
 
         }
 
-        static void Esercizio10()
+        static void Esercizio12()
         {
             Console.WriteLine("#### ESERCIZIO 12 ####");
 
@@ -176,7 +176,7 @@ namespace EserciziBase
             Console.WriteLine("{0},{0},{0},{0}", num1);
         }
 
-        static void Esercizio11()
+        static void Esercizio14()
         {
             Console.WriteLine("#### ESERCIZIO 14 ####");
 
@@ -188,7 +188,7 @@ namespace EserciziBase
 
         }
 
-        static void Esercizio12()
+        static void Esercizio18()
         {
             Console.WriteLine("#### ESERCIZIO 18 ####");
 
@@ -204,7 +204,7 @@ namespace EserciziBase
             else Console.WriteLine("Falso");
         }
 
-        static void Esercizio13()
+        static void Esercizio19()
         {
             Console.WriteLine("#### ESERCIZIO 19 ####");
             int num1, num2, sum, mult;
@@ -224,7 +224,7 @@ namespace EserciziBase
 
         }
 
-        static void Esercizio14()
+        static void Esercizio20()
         {
             Console.WriteLine("#### ESERCIZIO 20 ####");
 
@@ -314,7 +314,7 @@ namespace EserciziBase
 
         }
 
-        static void Esercizio18()
+        static void Esercizio23()
         {
             Console.WriteLine("#### ESERCIZIO 23 ####");
             //Write a C# program to convert a given string into lowercase
@@ -325,35 +325,84 @@ namespace EserciziBase
             Console.WriteLine($"questa è la tua frase trasformata:\n{stringaDaModificare.ToUpper()}");
         }
 
-        static void Esercizio19()
+        static void Esercizio24()
         {
-            Console.WriteLine("#### ESERCIZIO 28 ####");
+            Console.WriteLine("#### ESERCIZIO 24 ####");
             //Write a C# program to find the longest word in a string
-            string stringaImmessa = "Write a C# Sharp Program to display the following pattern using the alphabet";
-            
-            string[] getStringLength = stringaImmessa.Split();
-            foreach (string word in getStringLength)
+            //string stringaImmessa = "Write a C# Sharp Program to display the following pattern using the alphabet";
+            //inseriamo la frase da analizzare
+            Console.WriteLine("Inserisci qui la frase che vuoi analizzare: ");
+            string stringaDaAnalizzare;
+            stringaDaAnalizzare = Console.ReadLine();
+            if(stringaDaAnalizzare == "")
             {
-                
-                Console.WriteLine(word.Length);
-
+                Console.WriteLine("per iniziare l'analisi devi inserire almeno una parola");
             }
-            //return word;
-
-            //string word;
-            /*string[] pippo = new string[getStringLength.Length];
-            for(int i=0; i<=pippo.Length; i++)
-            {
-                if( i>i++)
+            else { 
+                char[] separatori = new char[] {' ', ',', '!', ';', '?'};
+         
+                string[] words = stringaDaAnalizzare.Split(separatori, StringSplitOptions.RemoveEmptyEntries);
+                string longestWord, currWord;
+                longestWord = "";
+                for(int w=0; w < words.Length-1; w++)
                 {
-                
+                    currWord = words[w];
+                    if(currWord.Length > longestWord.Length)
+                    {
+                        longestWord = currWord;
+                    }
                 }
-            Console.Write(i);
-                i++;
-            }
-            
-    */
+               /* primo algoritmo pensato
+                 
+                for(int w=0; w < words.Length-1; w++)
+                {
+                    string currWord = words[w];
+                    string nextWord = words[w + 1];
+                    string temp = "";
+                    if (currWord.Length < nextWord.Length)
+                    {
+                        temp = nextWord;
+                    }
+                    else
+                    {
+                        temp = currWord;
+                    }
+                    if (temp.Length > longestWord.Length)
+                    {
+                        longestWord = temp;
+                    }
+                }
+                */
+                Console.WriteLine($"la stringa più lunga tra quelle inserite è: {longestWord}");
 
+            }
+
+
+
+        }
+
+        static void Esercizio28()
+        {
+            Console.WriteLine("### ESERCIZIO 28 ###");
+            //Write a C# program to reverse the words of a sentence
+            Console.WriteLine("Scrivi qui la frase: ");
+            string stringaInserita = Console.ReadLine();
+
+            string[] miaScarpiera = stringaInserita.Split();
+            string[] scarpieraInversa = new string[miaScarpiera.Length];
+            int i = 0;
+            for(int s = miaScarpiera.Length-1; s >= 0; s--)
+            {
+                string currScarpa = miaScarpiera[s];
+                scarpieraInversa[i] = currScarpa;
+                i = i + 1;
+            }
+            string fraseFinale = "";
+            for (i=0;i < scarpieraInversa.Length-1; i++)
+            {
+                fraseFinale = fraseFinale + scarpieraInversa[i] + " ";
+            }
+            Console.WriteLine(fraseFinale);
         }
     }
 
