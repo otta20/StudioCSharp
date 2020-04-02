@@ -391,14 +391,14 @@ namespace EserciziBase
             string[] miaScarpiera = stringaInserita.Split();
             string[] scarpieraInversa = new string[miaScarpiera.Length];
             int i = 0;
-            for(int s = miaScarpiera.Length-1; s >= 0; s--)
+            for(int s = miaScarpiera.Length-1; s>=0; s--)
             {
                 string currScarpa = miaScarpiera[s];
                 scarpieraInversa[i] = currScarpa;
-                i = i + 1;
+                i++;
             }
             string fraseFinale = "";
-            for (i=0;i < scarpieraInversa.Length-1; i++)
+            for (i=0;i <= scarpieraInversa.Length-1; i++)
             {
                 fraseFinale = fraseFinale + scarpieraInversa[i] + " ";
             }
