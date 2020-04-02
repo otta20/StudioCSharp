@@ -30,7 +30,16 @@ namespace EserciziBase
             //  Esercizio19();
             //  Esercizio23();
             //  Esercizio24();
-            Esercizio28();
+            //  Esercizio28();
+            //  Esercizio32();
+            //  Esercizio34();
+            //  Esercizio37();
+            //  Esercizio38();
+            Esercizio41();
+            //  Esercizio42();
+            //  Esercizio43();
+            //  Esercizio44();
+            //  Esercizio56():
             Console.ReadLine();
         }
 
@@ -404,6 +413,121 @@ namespace EserciziBase
             }
             Console.WriteLine(fraseFinale);
         }
-    }
 
+        static void Esercizio32()
+        {
+            Console.WriteLine("### ESERCIZIO 32 ###");
+            //Write a C# program to create a new string of four copies, taking last four characters from a given string. 
+            //If the length of the given string is less than 4 return the original one.
+            Console.WriteLine("Scrivi qui la tua frase: ");
+            string fraseImessa = Console.ReadLine();
+            //char[] caratteriDaEliminare = new char[] {' ', '!', ',', ';', ':', '.', '?' };
+
+            //fraseImmesa è la stringa da manipolare -> se la lunghezza è < di 4 allora stampo nuovamente la frase, se > di 4 allora avvio la manipoalazione
+            if (fraseImessa.Length < 4)
+            {
+                Console.WriteLine($"la tua frase \"{fraseImessa}\" ha meno di 4 caratteri");
+            }
+            else
+            {
+                string fraseSenzaSpazi = fraseImessa.Replace(' ', '.');
+                string fraseDaManipolare = fraseSenzaSpazi.Substring(fraseImessa.Length-4);
+                Console.WriteLine(fraseDaManipolare+fraseDaManipolare+fraseDaManipolare+fraseDaManipolare);
+            }
+
+        }
+    
+        static void Esercizio34()
+        {
+            //Write a C# program to check if a string starts with a specified word.
+            Console.WriteLine("### ESERCIZIO 34 ###");
+
+            Console.WriteLine("Inserisci qui la tua frase: ");
+            string fraseImmessa = Console.ReadLine();
+
+            //stringa Immessa deve inziare con Super
+            if (fraseImmessa.StartsWith("Super", StringComparison.InvariantCultureIgnoreCase))
+            {
+                Console.WriteLine($"la frase che hai immesso \"{fraseImmessa}\" inzia con: \"Super o super\"");
+            }
+            else
+            {
+                Console.WriteLine($"la frase che hai immesso \"{fraseImmessa}\" NON inzia con: \"Super o super\"");
+            }
+
+        }
+
+        static void Esercizio37()
+
+        {
+            //Write a C# program to check if "HP" appears at second position in a string and returns the string without "HP"
+            Console.WriteLine("### ESERCIZIO 37 ###");
+
+            Console.WriteLine("Inserisci qui la frase: \"PHP Tutorial online\"");
+            string fraseImmessa = Console.ReadLine();
+            
+            int conteggioStringa = fraseImmessa.IndexOf("HP", 1);
+            string fraseManipolata;
+
+            if(conteggioStringa == 1)
+            {
+                fraseManipolata = fraseImmessa.Remove(1, 2);
+                Console.WriteLine($"la tua frase contiene la stringa \"HP\"  e il risultato della manipolazione è: {fraseManipolata}");
+            }
+            else
+            {
+                Console.WriteLine("la frase inserita non rispecchia i requisiti richiesti!");
+            }
+
+        }
+
+        static void Esercizio38()
+        {
+            Console.WriteLine("### ESERCIZIO 38 ###");
+            //Write a C# program to get a new string of two characters from a given string. 
+            //The first and second character of the given string must be "P" and "H", so PHP will be "PH"
+            Console.WriteLine("Scrivi qui la tua frase: PHP Tutorial online. \n ");
+            string fraseImmessa = Console.ReadLine();
+
+            bool fraseDaManipolare = fraseImmessa.Contains("PH");
+            if (fraseImmessa.Length > 1 && fraseDaManipolare == true)
+            {
+                Console.WriteLine($"la nuova stringa generata da {fraseImmessa} è: PH");
+            }
+            else
+            {
+                Console.WriteLine($"La frase inserita \"{fraseImmessa}\" non rispecchia i requisiti");
+            }
+
+        }
+
+        static void Esercizio41()
+        {
+            Console.WriteLine("### ESERCIZIO 41 ###");
+            //Write a C# program to check if a given string contains ‘w’ character between 1 and 3 times
+            Console.WriteLine("Inserisci qui una frase che contenga almeno una \"w\": ");
+            string fraseInserita = Console.ReadLine();
+            //verifico quante volte ricorre il carattere 'w'
+            int countLetter = 1;
+            char currentLetter;
+    
+            for(int l=0; l < fraseInserita.Length-1; l++)
+            {
+                if (fraseInserita[l] == 'w')
+                {
+                    countLetter++;
+                }
+          
+            }
+            if (countLetter > 3)
+            {
+                Console.WriteLine("La frase inserita non rispecchia i requisiti richiesti!");
+            }
+            else
+            {
+                Console.WriteLine($"La frase inserita contiene n.{countLetter} lettere \"w\"");
+            }
+
+        }
+    }
 }
