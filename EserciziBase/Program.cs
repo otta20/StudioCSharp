@@ -35,11 +35,11 @@ namespace EserciziBase
             //  Esercizio34();
             //  Esercizio37();
             //  Esercizio38();
-            Esercizio41();
+            //  Esercizio41();
             //  Esercizio42();
             //  Esercizio43();
             //  Esercizio44();
-            //  Esercizio56():
+            Esercizio56();
             Console.ReadLine();
         }
 
@@ -509,7 +509,6 @@ namespace EserciziBase
             string fraseInserita = Console.ReadLine();
             //verifico quante volte ricorre il carattere 'w'
             int countLetter = 1;
-            char currentLetter;
     
             for(int l=0; l < fraseInserita.Length-1; l++)
             {
@@ -527,6 +526,90 @@ namespace EserciziBase
             {
                 Console.WriteLine($"La frase inserita contiene n.{countLetter} lettere \"w\"");
             }
+
+        }
+
+        static void Esercizio42()
+        {
+            Console.WriteLine("### ESERCIZIO 42 ###");
+            //Write a C# program to create a new string where the first 4 characters will be in lower case. 
+            //If the string is less than 4 characters then make the whole string in upper case
+            Console.WriteLine("Inserisci aui la tua frase: ");
+            string fraseInserita = Console.ReadLine();
+
+           
+            if (fraseInserita.Length>4)
+            {
+                string fraseDaManipolare = fraseInserita.Substring(0, 4);
+                string fraseManipolata = fraseDaManipolare.ToLower();
+                Console.WriteLine($"La tua frase con i primi 4 caratteri modificati è questa: \"{fraseManipolata + fraseInserita.Substring(4)}\"");
+            }
+            else
+            {
+                Console.WriteLine($"La tua frase è composta da 1 fino a 4 caratteri, questo il risultao della manipolazione \"{fraseInserita.ToUpper()}\"");
+            }
+            
+
+        }
+
+        static void Esercizio43()
+        {
+            Console.WriteLine("### ESERCIZIO 43 ###");
+            //Write a C# program to check if a given string starts with "w" and immediately followed by two "ww"
+            Console.WriteLine("Inserisci aui la tua frase: ");
+            string fraseInserita = Console.ReadLine();
+
+            //bool fraseIniziale = fraseInserita.StartsWith("w"+"wwww");
+            if (fraseInserita.StartsWith("w" + "ww") == true)
+            {
+                Console.WriteLine("la tua frase inzia con \'w\' e \'ww\'.");
+            }
+            else
+            {
+                Console.WriteLine("la tua frase non inizia con \'w\'.");
+            }
+
+        }
+
+        static void Esercizio44()
+        {
+            Console.WriteLine("### ESERCIZIO 44 ###");
+            //Write a C# program to create a new string of every other character (odd position) from the first position of a given string
+            Console.WriteLine("Inserisci qui la tua frase: ");
+            string fraseInserita = Console.ReadLine();
+            string fraseFinale="";
+            for (int f = 0; f < fraseInserita.Length-1; f++)
+            {
+                if (f % 2 == 0)
+                {
+                    fraseFinale += fraseInserita[f];
+                }
+            }
+            Console.WriteLine($"la nuova frase data dalla somma dei caratteri dispari della frase inserita è: {fraseFinale}");
+        }
+
+        static void Esercizio56()
+        {
+            Console.WriteLine("### ESERCIZIO 56 ###");
+            //Write a C# program to check if a given string is a palindrome or not
+            Console.WriteLine("Inserisci aui la tua frase: ");
+            string fraseInserita = Console.ReadLine();
+            string fraseFinale = "";
+
+            for (int i = 0; i < fraseInserita.Length; i++)
+            {
+                fraseFinale += fraseInserita[i];
+            }
+
+            if (fraseFinale == fraseInserita)
+            {
+                Console.Write($"La frase \"{fraseInserita}\" è un palindromo!");
+            }
+            else
+            {
+                Console.Write("La frase inserita non è un palindromo!");
+            }
+
 
         }
     }
