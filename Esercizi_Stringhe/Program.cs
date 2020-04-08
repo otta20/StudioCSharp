@@ -12,7 +12,10 @@ namespace Esercizi_Stringhe
         {
             //Esercizio4();
             //Esercizio5();
-            Esercizio6();
+            //Esercizio6();
+            //Esercizio1();
+            //Esercizio2();
+            Esercizio3();
             Console.ReadLine();
         }
         static void Esercizio4()
@@ -61,7 +64,7 @@ namespace Esercizi_Stringhe
             Console.WriteLine("Inserisci la seconda frase: ");
             string secondaFrase = Console.ReadLine();
 
-            char[] caratteriDaEliminare = new char[] { ' ', ',', ';', '.', ':', '[', ']', '{', '}', '(', ')', '/', '\n' };
+            char[] caratteriDaEliminare = new char[] {' '};
             string[] parolePrimaFrase = primaFrase.Split(caratteriDaEliminare, StringSplitOptions.None);
             string[] paroleSecondaFrase = secondaFrase.Split(caratteriDaEliminare, StringSplitOptions.None);
 
@@ -113,6 +116,68 @@ namespace Esercizi_Stringhe
                 
             }
         }
+
+        static void Esercizio1()
+        {
+            //Write a program in C# Sharp to store elements in an array and print it
+            Console.WriteLine("### ESERCIZIO 1 ###");
+            int[] dieciPosizioni = new int[10];
+            int d;
+
+            Console.WriteLine("Inserisci qui i numeri dell'array: ");
+            for (d = 0; d < 10; d++ )
+            {
+                Console.Write($"numero - {d}: ");
+                dieciPosizioni[d] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Questa è la stampa degli elementi inseriti nell'array");
+            for (d = 0; d < 10; d++)
+            {
+                Console.Write($"{dieciPosizioni[d]}");
+            }
+
+        }
+
+        static void Esercizio2()
+        {
+            //Write a program in C# Sharp to read n number of values in an array and display it in reverse order
+            Console.WriteLine("Esercizio 2");
+            int[] elencoInserito = new int[5];
+            Console.WriteLine($"inserisci qui gli elementi dell'array:");
+            for (int e = 0; e < 5; e++)
+            {
+                Console.Write($"elemento - {e}: ");
+                elencoInserito[e] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine($"questi gli elementi dell'array in ordine inverso:");
+            for (int e = 4; e >= 0; e--)
+            {
+                Console.Write($"{elencoInserito[e]} ");
+            }
+        }
+
+        static void Esercizio3()
+        {
+            Console.WriteLine("Write a program in C# Sharp to find the sum of all elements of the array.");
+            int sum = 0;
+            Console.Write($"inserisci il numenro degli elementi del tuo array: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] elencoInserito = new int[n];
+            for (int e = 0; e <= n-1; e++)
+            {
+                Console.Write($"elemento {e}: ");
+                elencoInserito[e]  = Convert.ToInt32(Console.ReadLine());
+                sum = sum + elencoInserito[e];
+            }
+            Console.WriteLine($"La somma degli elementi inseriti è: {sum}");            
+
+        }
+
+        static void Esercizio()
+        {
+
+        }
     }
 }
-}
+
