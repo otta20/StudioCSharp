@@ -18,7 +18,13 @@ namespace Esercizi_Stringhe
             //Esercizio3();
             //Esercizio7();
             //Esercizio8();
-            Esercizio9();
+            //Esercizio9();
+            //Esercizio12();
+            //Esercizio13();
+            //Esercizio14();
+            //Esercizio14Bis();
+            //Esercizio15();
+
             Console.ReadLine();
         }
         static void Esercizio4()
@@ -273,13 +279,13 @@ IZIO 5 ###");
             string fraseInserita = Console.ReadLine();
 
             char[] fraseDuplicata = new char[fraseInserita.Length];
-           // string fraseFinale = "";
-            for (int f = 0; f <= fraseInserita.Length-1; f++)
+            // string fraseFinale = "";
+            for (int f = 0; f <= fraseInserita.Length - 1; f++)
             {
                 fraseDuplicata[f] = fraseInserita[f];
-               // fraseFinale = fraseFinale + fraseDuplicata[f];
+                // fraseFinale = fraseFinale + fraseDuplicata[f];
             }
-            Console.Write($"la frase che hai inserito è: {fraseInserita},\nquella duplicata è: {string.Join("",fraseDuplicata)}.\nIl numero dei caratteri copiati è {fraseInserita.Length}");
+            Console.Write($"la frase che hai inserito è: {fraseInserita},\nquella duplicata è: {string.Join("", fraseDuplicata)}.\nIl numero dei caratteri copiati è {fraseInserita.Length}");
         }
 
         static void Esercizio9()
@@ -289,25 +295,230 @@ IZIO 5 ###");
             string fraseInserita = Console.ReadLine();
             int conteggioVocali = 0;
             int conteggioConsonanti = 0;
-            char[] elencoVocali = new char[] {'a','e','i','o','u','ì','è','é','ò','à','ù'};
+            char[] elencoVocali = new char[] { 'a', 'e', 'i', 'o', 'u', 'ì', 'è', 'é', 'ò', 'à', 'ù' };
 
-            bool contieneVocali = false;
+            // bool contieneVocali = false;
 
-            for (int f = 0; f <= fraseInserita.Length-1; f++)
+            for (int f = 0; f <= fraseInserita.Length - 1; f++)
             {
-                if( fraseInserita[f] == 'a' || fraseInserita[f] == 'e' || fraseInserita[f] == 'i' || fraseInserita[f] == 'o' || fraseInserita[f] == 'u' || fraseInserita[f] == 'ì' || fraseInserita[f] == 'è' || fraseInserita[f] == 'é' || fraseInserita[f] == 'ò' || fraseInserita[f] == 'à' || fraseInserita[f] == 'ù')
+                if (fraseInserita[f] == 'a' || fraseInserita[f] == 'e' || fraseInserita[f] == 'i' || fraseInserita[f] == 'o' || fraseInserita[f] == 'u' || fraseInserita[f] == 'ì' || fraseInserita[f] == 'è' || fraseInserita[f] == 'é' || fraseInserita[f] == 'ò' || fraseInserita[f] == 'à' || fraseInserita[f] == 'ù')
                 {
-                        conteggioVocali++;
+                    conteggioVocali++;
                 }
-                else if (fraseInserita[f] >= 'b' && fraseInserita[f] <= 'z' )
+                else if (fraseInserita[f] >= 'b' && fraseInserita[f] <= 'z')
                 {
                     conteggioConsonanti++;
                 }
             }
             Console.WriteLine($"la frse inserita contine n.{conteggioVocali} vocali e n.{conteggioConsonanti} consonanti");
         }
+
         static void Esercizio10()
         {
+            Console.WriteLine("Write a program in C# Sharp to find maximum occurring character in a string");
+            int conteggioOccorenza = 0;
+            char parolaPiuFrequente = ' ';
+            //char currentWord;
+            Console.WriteLine("Scrivi qui la tua frase: ");
+            string fraseInserita = Console.ReadLine();
+
+            //char[] caratteriDaEliminare = new char[] { ' ', '/', '\\','!','?' };
+            //string[] fraseDopoSplit = fraseInserita.Split(caratteriDaEliminare, StringSplitOptions.RemoveEmptyEntries);
+            //char[] caratteriDaEsaminare = new char[fraseDopoSplit.Length];
+            //char[] caratteriDuplicati = new char[caratteridaEsaminare.Length];
+
+            for (int e = 0; e <= fraseInserita.Length - 1; e++)
+            {
+                parolaPiuFrequente = fraseInserita[e];
+                for (int d = e + 1; d <= fraseInserita.Length - 1; d++)
+                {
+
+                    if (parolaPiuFrequente == fraseInserita[d])
+                    {
+                        conteggioOccorenza++;
+                    }
+
+                }
+            }
+            Console.Write($"{conteggioOccorenza}");
+
+
+        }
+
+        static void Esercizio11()
+        {
+            Console.WriteLine("Write a program in C# Sharp to sort a string array in ascending order");
+            Console.WriteLine("Scrivi qui la tua frase: ");
+            string fraseInserita = Console.ReadLine();
+            char temp = ' ';
+
+            for (int o = 0; o < fraseInserita.Length - 1; o++)
+            {
+                for (int u = o + 1; u < fraseInserita.Length; u++)
+                {
+                    if (fraseInserita[o] > fraseInserita[u])
+                    {
+                        temp = fraseInserita[o];
+                        //  fraseInserita[o] = fraseInserita[u];
+                        // fraseInserita[u] = temp;
+                    }
+                }
+            }
+
+        }
+
+        static void Esercizio12()
+        {
+            Console.WriteLine("Write a program in C# Sharp to read a string through the keyboard and sort it using bubble sort");
+            Console.Write("inserisci qui il numero di frasi che vuoi inserire: ");
+            int numeroInserito = Convert.ToInt32(Console.ReadLine());
+            string[] fraseInserita = new string[numeroInserito];
+            Console.Write($"Inserisci di seguito le {numeroInserito} frasi:\n");
+            for (int f = 0; f < numeroInserito; f++)
+            {
+                fraseInserita[f] = Console.ReadLine();
+            }
+
+            string temp = " ";
+
+            for (int f = 0; f < fraseInserita.Length; f++)
+            {
+                for (int i = 0; i < fraseInserita.Length - 1; i++)
+                {
+                    if (fraseInserita[i].CompareTo(fraseInserita[i + 1]) > 0)
+                    {
+                        temp = fraseInserita[i];
+                        fraseInserita[i] = fraseInserita[i + 1];
+                        fraseInserita[i + 1] = temp;
+                    }
+                }
+            }
+
+            Console.WriteLine($"il riordinamento delle frasi insertite è questo: \n");
+            for (int f = 0; f < fraseInserita.Length; f++)
+            {
+                Console.Write(fraseInserita[f] + " ");
+            }
+            /*string[] arr1;
+            string temp;
+            int n, i, j, l;
+
+            Console.Write("\n\nSorts the strings of an array using bubble sort :\n");
+            Console.Write("-----------------------------------------------------\n");
+            Console.Write("Input number of strings :");
+            n = Convert.ToInt32(Console.ReadLine());
+            arr1 = new string[n];
+            Console.Write("Input {0} strings below :\n", n);
+            for (i = 0; i < n; i++)
+            {
+                arr1[i] = Console.ReadLine();
+            }
+            l = arr1.Length;
+
+            for (i = 0; i < l; i++)
+            {
+                for (j = 0; j < l - 1; j++)
+                {
+                    if (arr1[j].CompareTo(arr1[j + 1]) > 0)
+                    {
+                        temp = arr1[j];
+                        arr1[j] = arr1[j + 1];
+                        arr1[j + 1] = temp;
+                    }
+                }
+            }
+            Console.Write("\n\nAfter sorting the array appears like : \n");
+            for (i = 0; i < l; i++)
+            {
+                Console.WriteLine(arr1[i] + " ");
+            }*/
+
+        }
+
+        static void Esercizio13()
+        {
+            Console.WriteLine("Write a program in C# Sharp to extract a substring from a given string without using the library function.");
+            Console.Write("inserisci la frase: ");
+            string fraseInserita = Console.ReadLine();
+            Console.Write("inserisci la posizione da cui iniziare l'estrazione: ");
+            int posEstrazione = Convert.ToInt32(Console.ReadLine());
+            Console.Write("inserisci la lunghezza della sottostringa: ");
+            int lungSubString = Convert.ToInt32(Console.ReadLine());
+            
+            string fraseFinale = " ";
+            char[] fraseDaCreare = new char[fraseInserita.Length];
+            for (int f = posEstrazione; f <= lungSubString; f++)
+            {
+                fraseDaCreare[f] = fraseInserita[f];
+                fraseFinale = fraseFinale + fraseDaCreare[f];
+            }
+            Console.Write($"dalla posizione scelta {posEstrazione} è stata creata la seguente frase: \"{fraseFinale}\" di lunghezza {lungSubString} ");
+
+        }
+
+        static void Esercizio14()
+        {
+            Console.WriteLine("Write a C# Sharp program to check whether a given substring is present in the given string");
+            Console.Write("Inserisci la frase: ");
+            string fraseInserita = Console.ReadLine();
+            Console.Write("Inserisci la frese da cercare: ");
+            string stringaDaCercare = Console.ReadLine();
+            string[] stringSeparator = new string[] { " " };
+
+            string[] stringadaAnalizzare = fraseInserita.Split(stringSeparator, StringSplitOptions.None);
+            for (int f = 0; f < stringadaAnalizzare.Length - 1; f++)
+            {
+                if (stringaDaCercare == stringadaAnalizzare[f])
+                {
+                    Console.WriteLine("esiste la corrispondenza");
+                    break;
+                }
+                //questa modalità di svolgimento non mi consente di avere una risposta univoca in caso contrario
+            }
+        }
+
+        static void Esercizio14Bis()
+        {
+            Console.WriteLine("Write a C# Sharp program to check whether a given substring is present in the given string");
+            Console.Write("Inserisci la frase: ");
+            string fraseInserita = Console.ReadLine();
+            Console.Write("Inserisci la frese da cercare: ");
+            string stringaDaCercare = Console.ReadLine();
+
+            bool ricercaPositiva = fraseInserita.Contains(stringaDaCercare);
+            if (ricercaPositiva == true)
+            {
+                Console.WriteLine("Esiste la corrispondenza");
+            }
+            else
+            {
+                Console.WriteLine("Non esiste corrispondenza");
+            }
+
+        }
+
+        static void Esercizio15()
+        {
+            Console.WriteLine("Write a program in C# Sharp to read a sentence and replace lowercase characters by uppercase and vice-versa");
+            Console.Write("Scrivi qui la tua frase: ");
+            string fraseInserita = Console.ReadLine();
+
+            char[] caratteriDaCambiare = fraseInserita.ToCharArray();
+            char ch;
+            for (int c = 0; c <=
+                caratteriDaCambiare.Length - 1; c++)
+            {
+                ch = caratteriDaCambiare[c];
+                if (Char.IsLower(ch))
+                {
+                    Console.Write(Char.ToUpper(ch));
+                }
+                else
+                {
+                    Console.Write(Char.ToLower(ch));
+                }
+                //Console.WriteLine("");
+            }
         }
     }
 }
