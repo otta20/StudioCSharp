@@ -24,7 +24,9 @@ namespace Esercizi_Stringhe
             //Esercizio14();
             //Esercizio14Bis();
             //Esercizio15();
-
+            //Esercizio17();
+            //Esercizio18();
+            Esercizio19();
             Console.ReadLine();
         }
         static void Esercizio4()
@@ -519,6 +521,66 @@ IZIO 5 ###");
                 }
                 //Console.WriteLine("");
             }
+        }
+
+        static void Esercizio17()
+        {
+            Console.WriteLine("Write a program in C# Sharp to search the position of a substring within a string");
+
+            Console.Write("Inserisci la frase: ");
+            string fraseInserita = Console.ReadLine();
+            Console.Write("inserisci la stringa che voi cercare: ");
+            string parolaRicercata = Console.ReadLine();
+
+            int posizioneRicercata = fraseInserita.IndexOf(parolaRicercata);
+            Console.Write($"{posizioneRicercata}");
+        }
+
+        static void Esercizio18()
+        {
+            Console.WriteLine("Write a program in C# Sharp to check whether a character is an alphabet and not and if so, go to check for the case");
+            Console.Write("inserisci qui una lttera dell'alfabeto: ");
+            char letteraInserita = Convert.ToChar(Console.ReadLine());
+            if (letteraInserita >= 'a' && letteraInserita <= 'z')
+            {
+                Console.WriteLine($"la lettera inserita \"{letteraInserita}\" è in carattre minuscolo");
+            }
+            else if (letteraInserita >= 'A' && letteraInserita <= 'Z')
+            {
+                Console.WriteLine($"la lettere inserita \"{letteraInserita}\" è in carattere maiscolo");
+            }
+            else
+            {
+                Console.Write("non hai inserito un carattere valido, ritenta!");
+            }
+        }
+
+        static void Esercizio19()
+        {
+            Console.WriteLine("Write a program in C# Sharp to find the number of times a substring appears in a given string");
+            Console.Write("inserisci qui la frased analizzare: ");
+            string fraseInserita = Console.ReadLine();
+            Console.Write("inserisci qui la parola da cercare: ");
+            string parolaInserita = Console.ReadLine();
+            string[] elementiDaEliminare = new string[] {" "};
+            string[] fraseAnalizzata = fraseInserita.Split(elementiDaEliminare,StringSplitOptions.RemoveEmptyEntries);
+            int conteggioOccorrenze = 0;
+            if (fraseInserita != "" && parolaInserita != "")
+            {
+                for( int o = 0; o < fraseAnalizzata.Length-1; o++)
+                {
+                    if (parolaInserita == fraseAnalizzata[o])
+                    {
+                        conteggioOccorrenze++;
+                    }
+                }
+                Console.Write($"la parola \"{parolaInserita}\" è dichiarata n.{conteggioOccorrenze} volte nella frase \"{fraseInserita}\"");
+            }
+            else
+            {
+                Console.Write("non sono stati inseriti dei dati validi per la ricerca richiesta");
+            }
+            
         }
     }
 }
