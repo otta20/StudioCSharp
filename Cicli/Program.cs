@@ -110,6 +110,28 @@ namespace Cicli
 
         static void VersioneConFunzioni()
         {
+            // le funzioni hanno 3 elemnti da considerare:
+            // 1) il nome descrittivo che deve far capire il suo comportamento, buona prassi è insiziare il nome con una parola (verbo)
+            //    che indichi in maniera non ambigua che cosa potrebe restituire (Is, Get, Read, Print, Find...);
+            // 2) output -> il tipo restituito (int, string, bool,...) oppure void;
+            // 3) input -> la lista di uno o più paramentri formali separati dalla virgola con sintassi "tipo nomeParametro"
+            //    il nome del parametro deve essere significativo della semantica che la funziona associa a quel parametro;
+            //    N.B.: i paramentri di una funzione in quanto formali non devono esser scambiati per quelli che sono i paramtri attuali
+            //    che verranno passati dal chiamante; 
+            // Esempio: una funzione che restituisce il nome di un utente a fronte del suo ID:
+            // string GetNomeUtente(int idUtente)
+            // {
+            //      recupera nome utnete da DB;
+            // }
+            // 
+            // Dentro il corpo delle funzioni per restituire un risultato (compatibile con il tipo dichiarato in output) si usa la keyword "return <espressione/variabile>";
+            // N.B.: in caso di funzioni con output "void" è possibile usare la Keyword "return;" con l'effetto di uscire dalla funzione senza restituire nulla;
+            //
+            //
+            // Come si chiamano le funzioni->per chiamare una funzione si scrive il nome seguito dalle () con dentro i parametri attuali;
+            // N.B.: nel caso la funzione resituisca qualcosa (output !void) tipicamente i risultato ottenuto va assegnato ad una qualche variabile
+            // Esempio: string nome = GetNomeUtente(idUtente)
+
             string[] domandeQuiz = new string[5] { "Qual è il libro di maggior successo di Umberto Eco?", "Qual è il libro di maggior successo di Gabriel Garcia Marquez?", "Qual è il libro di maggior successo di Paolo Choelo?", "Qual è il libro di maggior successo di Isabel Allende?", "Qual è il libro di maggior successo di J.K.Rowling?" };
             string[] risposteQuiz = new string[5] { "Il nome della Rosa", "Cent'anni di solitudine", "L'Alchimista", "La casa degli spiriti", "La saga di Harry Potter" };
             int maxAttempts = 3;
