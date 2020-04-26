@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stringhe", "Stringhe\String
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esercizi_Stringhe", "Esercizi_Stringhe\Esercizi_Stringhe.csproj", "{92A36B52-7C04-496B-8242-EBDA8841D35F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cicli", "Cicli\Cicli.csproj", "{6E24916F-37EC-41C8-B7D6-BA6BF292B41D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{92A36B52-7C04-496B-8242-EBDA8841D35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92A36B52-7C04-496B-8242-EBDA8841D35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92A36B52-7C04-496B-8242-EBDA8841D35F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E24916F-37EC-41C8-B7D6-BA6BF292B41D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E24916F-37EC-41C8-B7D6-BA6BF292B41D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E24916F-37EC-41C8-B7D6-BA6BF292B41D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E24916F-37EC-41C8-B7D6-BA6BF292B41D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
